@@ -16,6 +16,15 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import request from '@/utils/request'
+
+// 测试接口
+// request({
+//   method: 'get',
+//   url: '/boss/v2/api-docs?group=edu-boss-boot'
+// }).then(res => {
+//   console.log(res)
+// })
 export default Vue.extend({
   data () {
     return {

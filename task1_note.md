@@ -59,7 +59,7 @@ console.log(MyClass.isTest) // --> true
     > 鼠标移动到‘@vue/eslint-config-typescript’上，[查看链接](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
 
 ### 15. 导入Element 组件库
-1. 全部引入，不是按需引入
+1. 此项目需要全部引入，不是按需引入
 2. [链接](https://element.eleme.cn/#/zh-CN/component/quickstart)
 
 ### 16. 样式处理
@@ -67,4 +67,13 @@ console.log(MyClass.isTest) // --> true
 
 ### 17. 样式处理-共享全局样式变量
 1. [vue cli 处理方式](https://cli.vuejs.org/zh/guide/css.html#%E5%90%91%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8-loader-%E4%BC%A0%E9%80%92%E9%80%89%E9%A1%B9)
-2. 但是
+2. 但是sass需要处理 [处理方式](https://blog.csdn.net/weixin_52369659/article/details/117949984)
+
+### 18. 接口处理-配置后端代理
+1. [vue cli 官方配置](https://cli.vuejs.org/zh/config/#devserver-proxy)
+2.后台提供的数据接口
+  > http://eduboss.lagou.com
+  > [http://edufront.lagou.com](http://113.31.105.128/front/doc.html#/home)
+  这两个接口都没有提供CORS 跨域请求，所以需要在客户端配置服务端代理处理跨域请求
+
+### 19. 接口处理-封装请求模块
