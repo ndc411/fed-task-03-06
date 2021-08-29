@@ -59,3 +59,12 @@ console.log(MyClass.isTest) // --> true
     > 鼠标移动到‘@vue/eslint-config-typescript’上，[查看链接](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
 
 ### 15. 导入Element 组件库
+1. 全部引入，不是按需引入
+2. [链接](https://element.eleme.cn/#/zh-CN/component/quickstart)
+
+### 16. 样式处理
+1. 在styles/index.scss' 引入 element的样式
+
+### 17. 样式处理-共享全局样式变量
+1. [vue cli 处理方式](https://cli.vuejs.org/zh/guide/css.html#%E5%90%91%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8-loader-%E4%BC%A0%E9%80%92%E9%80%89%E9%A1%B9)
+2. 但是
