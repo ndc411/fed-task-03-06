@@ -80,6 +80,13 @@ console.log(MyClass.isTest) // --> true
 1. axios
 
 ### 20. 布局-初始化路由组件
-1. vscode 自动生成代码片段
+1. [vscode 自动生成代码片段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
 
 ### 21. 布局-Layout和嵌套路由
+1. [vue 嵌套路由](https://router.vuejs.org/zh/guide/essentials/nested-routes.html)
+
+### 22. 布局-Container布局容器
+1. [布局容器](https://element.eleme.cn/#/zh-CN/component/container)
+
+### 23. 布局-侧边栏菜单
+1. 在 el-menu 中添加 router 属性开启路由模式

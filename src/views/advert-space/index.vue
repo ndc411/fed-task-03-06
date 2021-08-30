@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>Advert space Index</div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'index'
+  name: 'AdvertSpaceIndex'
 })
 </script>
 <style lang="scss" scoped>

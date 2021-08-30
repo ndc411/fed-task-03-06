@@ -1,11 +1,11 @@
 <template>
-  <div>advert</div>
+  <div>login</div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'AdvertIndex'
+  name: 'LoginIndex'
 })
 </script>
 <style lang="scss" scoped>
