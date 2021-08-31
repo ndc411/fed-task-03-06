@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 // 路由配置规则
 const routes: Array<RouteConfig> = [
   {
-    path: 'login',
+    path: '/login',
     name: 'login',
     component: () => import(/*  webpackChunkName: 'home */ '@/views/login/index.vue')
   },

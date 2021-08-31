@@ -5,7 +5,9 @@
         <app-aside />
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header>
+          <app-header />
+        </el-header>
         <el-main>
           <router-view />
         </el-main>
@@ -16,8 +18,9 @@
 
 <script>
 import AppAside from './components/app-aside.vue'
+import AppHeader from './components/app-header.vue'
 export default {
-  components: { AppAside },
+  components: { AppAside, AppHeader },
   name: 'LayoutIndex'
 }
 </script>
@@ -31,7 +34,9 @@ export default {
   background: #d3dce6;
 }
 .el-header {
-  background: #b3c0d1;
+  background: #fff;
+  display: flex;
+  align-items: center;
 }
 .el-main {
   background: #fff;
