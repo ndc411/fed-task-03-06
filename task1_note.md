@@ -103,3 +103,40 @@ console.log(MyClass.isTest) // --> true
 1. mobile: 18201288771  pwd: 111111
 2. axios 默认发送的是application/json 格式的数据，所以根据接口要求，需要转化--> 可以使用 qs
 3. axios post的接口，数据需要放在data中
+
+### 28. 登录-处理请求结果
+1. 组件调用使用 this.$message
+2. 可以直接return
+```
+if (data.state !== 1) {
+  return this.$message.error(data.message)
+}
+```
+
+### 29. 登录-请求期间禁用按钮点击
+1. try catch能让代码继续往下执行，所以在最后去除loading
+2. element ui表单验证很奇特，第一次见这种写法
+```
+try {
+        await (this.$refs.form as Form).validate()
+        this.isLoginLoading = true
+        // ...
+} catch () {
+  // ...
+}
+<!-- hideLoding -->
+this.loading = false
+```
+
+### 30. 登录-表单验证
+1. `this.$refs.form as Form`，是为了符合ts的类型代码校验，这里的Form可以使用any代替，但是这是万不得已才做的，
+2. 该校验返回promise，可以用async await，使用try catch捕获async await异常
+
+### 31. 登录-封装请求方法
+1. 简单的axios封装，单独文件封装一类请求，请求数据的格式严格定义
+
+### 32. 登录-关于请求体data和ContentType的问题
+ > axios中：发送请求时，content-type 的值：
+    1. data 是普通对象，其值为: application/json(axios 默认值)
+    2. data 是 qs stringfy转换之后的数据：key=value&key2=value2，此时content-type被设置为: x-www-form-urlencode
+    3. data 是FormData对象， 则 Content-Type 被设置为 multipart/form-data
