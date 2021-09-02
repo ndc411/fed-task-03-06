@@ -1,6 +1,7 @@
 /**
  * 用户相关请求模块
  */
+import store from '@/store'
 import requst from '@/utils/request'
 import qs from 'qs'
 
@@ -19,5 +20,12 @@ export const loginApi = (data: User) => {
     // data是FormData对象， 则 Content-Type 被设置为 multipart/form-data
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     data: qs.stringify(data)
+  })
+}
+
+export const userInfoApi = () => {
+  return requst({
+    method: 'GET',
+    url: '/front/user/getInfo'
   })
 }

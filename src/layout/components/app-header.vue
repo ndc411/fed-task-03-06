@@ -8,21 +8,43 @@
     </el-breadcrumb>
     <el-dropdown>
       <span class="el-dropdown-link">
-        <el-avatar shape="square" :size="26" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" />
+        <el-avatar shape="square" :size="26" :src="userInfo.portrait || require('@/assets/default-acatar.png')" />
         <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item>用户ID</el-dropdown-item>
-        <el-dropdown-item divided>退出</el-dropdown-item>
+        <el-dropdown-item>{{ userInfo.userName }}</el-dropdown-item>
+        <el-dropdown-item divided @click.native="handleLogout">退出</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </div>
 </template>
 <script lang="ts">
+import { userInfoApi } from '@/services/user'
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'AppHeader'
+  name: 'AppHeader',
+  data () {
+    return {
+      userInfo: {
+        userName: '',
+        portrait: ''
+      }
+    }
+  },
+  created () {
+    this.getUserInfo()
+  },
+  methods: {
+    async getUserInfo () {
+      const { data } = await userInfoApi()
+      this.userInfo = data.content
+    },
+    handleLogout () {
+      this.$store.commit('setUser', null)
+      this.$router.push('/login')
+    }
+  }
 })
 </script>
 <style lang="scss" scoped>

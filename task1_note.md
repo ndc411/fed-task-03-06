@@ -100,7 +100,7 @@ console.log(MyClass.isTest) // --> true
 2. 定义url变量，在使用时方便的切换---生产，测试
 
 ### 27. 登录--请求登录
-1. mobile: 18201288771  pwd: 111111
+1. mobile: 18201288771  pwd: 111111(18211111111)
 2. axios 默认发送的是application/json 格式的数据，所以根据接口要求，需要转化--> 可以使用 qs
 3. axios post的接口，数据需要放在data中
 
@@ -140,3 +140,27 @@ this.loading = false
     1. data 是普通对象，其值为: application/json(axios 默认值)
     2. data 是 qs stringfy转换之后的数据：key=value&key2=value2，此时content-type被设置为: x-www-form-urlencode
     3. data 是FormData对象， 则 Content-Type 被设置为 multipart/form-data
+
+### 33. 身份认证-把登录状态存储到Vuex容器中
+1. 简单的持久化
+
+### 34. 身份认证-校验页面访问权限
+1. 通过在父路由设置 是否需要登录，来统一处理登录，方便简单
+
+### 35. 身份认证-测试获取当前登录用户信息接口
+1. 在postman中设置统一的参数，不再重复的为每个接口添加参数
+
+### 36. 身份认证-登录成功跳转回原来页面
+1. 登录跳转地址的 转化
+```
+this.$router.push(this.$route.query.redirect as string || '/')
+```
+
+### 37. 身份认证-展示当前登录用户信息
+
+### 38. 身份认证-使用请求拦截器统一设置Token
+1. [axios文档](http://www.axios-js.com/zh-cn/docs/#%E6%8B%A6%E6%88%AA%E5%99%A8)
+
+### 39. 身份认证-用户退出
+1. 在组件中直接添加点击事件可能行不通，解决方案
+    > 1. 看组件文档； 2. 使用@click.native 穿透到他的根元素上，添加点击事件
