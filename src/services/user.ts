@@ -23,9 +23,9 @@ export const loginApi = (data: User) => {
   })
 }
 
-export const userInfoApi = () => {
+export const userInfoApi = (id: number) => {
   return requst({
     method: 'GET',
-    url: '/front/user/getInfo'
+    url: `/front/user/getInfo?id=${id}`
   })
 }

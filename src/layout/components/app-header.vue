@@ -33,11 +33,13 @@ export default Vue.extend({
     }
   },
   created () {
-    this.getUserInfo()
+    this.getUserInfo(1)
+    this.getUserInfo(2)
+    this.getUserInfo(3)
   },
   methods: {
-    async getUserInfo () {
-      const { data } = await userInfoApi()
+    async getUserInfo (id: number) {
+      const { data } = await userInfoApi(id)
       this.userInfo = data.content
     },
     handleLogout () {
