@@ -1,7 +1,6 @@
 /**
  * 用户相关请求模块
  */
-import store from '@/store'
 import requst from '@/utils/request'
 import qs from 'qs'
 
