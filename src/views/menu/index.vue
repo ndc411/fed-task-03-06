@@ -34,20 +34,6 @@ export default Vue.extend({
   name: 'MenuIndex',
   data () {
     return {
-    // createdBy:"system"
-    // createdTime:"2021-05-19T01:44:08.000+0800"
-    // description:"管理系统角色、菜单、资源"
-    // href:""
-    // icon:"lock"
-    // id:1
-    // level:0
-    // name:"权限管理"
-    // operatorId:null
-    // orderNum:1
-    // parentId:-1
-    // shown:true
-    // updatedBy:"17201234567"
-    // updatedTime:"2021-05-19T17:48:52.000+0800"
       menuList: []
     }
   },

@@ -1,11 +1,17 @@
 <template>
-  <div>~/study/lagoujiaoyu/fed-e-task-03-06/src/views/resource</div>
+  <div>
+    <resource-list />
+  </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import ResourceList from './components/List.vue'
 
 export default Vue.extend({
-  name: 'ResourceIndex'
+  name: 'ResourceIndex',
+  components: {
+    ResourceList
+  }
 })
 </script>
 <style lang="scss" scoped>

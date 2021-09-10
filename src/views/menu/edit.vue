@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import CreateOrEdit from './components/CreateOrEdit.vue'
+import CreateOrEdit from './components/AddOrEdit.vue'
 
 export default Vue.extend({
   name: 'MenuCreate',
